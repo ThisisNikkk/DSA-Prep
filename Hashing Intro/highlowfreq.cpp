@@ -16,7 +16,7 @@ int main(){
     }
     cout<<endl;
 
-    unordered_map<int, int> mpp;
+    unordered_map<int, int> mpp; 
     for(int i=0; i<n; i++){
         mpp[arr[i]]+=1;
     }
@@ -33,7 +33,7 @@ int main(){
             maxFreq = freq;
             maxEle = element;
         }
-        if(freq<minFreq){
+        if(freq<=minFreq){
             minFreq = freq;
             minEle = element;
         }
