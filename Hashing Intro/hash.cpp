@@ -1,27 +1,23 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-
 int main(){
-    int n;
-    cin>>n;
-    int arr[n];
-    for(int i =0; i<n; i++){
-        cin>>arr[i];
-    }
-    
-    for(int i =0; i<n; i++){
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
+    int arr [] = {1,2,3,1,3,2,12};
+    int n = sizeof(arr)/sizeof(arr[0]);
 
-    //precomputation
-    int hash[13]={0};
-    for(int i = 0; i<n; i++){
+    //precomputations
+    int hash[13] = {0};
+    for(int i =0; i<n; i++){
         hash[arr[i]] += 1;
     }
 
     //fetching
-    int x;
-    cin>>x;
-    cout<<hash[x];
+    int q;
+    cout<<"Enter the number of queries: "<<endl;
+    cin>>q;
+    while(q--){
+        int num;
+        cout<<"Enter the number to be searched: "<<endl;
+        cin>>num;
+        cout<<hash[num]<<endl;
+    }
 }
